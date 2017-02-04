@@ -1,17 +1,24 @@
 package com.yash.dataStructures.arrrays;
 
 /**
- * Created by Raj on 1/29/2017.
+ * Created by Yash on 1/29/2017.
  */
 public class ArrayApp {
 
     public static void main(String[] args) {
         int[] arr = new int[] {3,2,4,1,5,6,8,9,7,0};
+        int i;
+        //display
+
+        System.out.println("Elements are : ");
+        for(i=0;i<arr.length;i++){
+            System.out.print("|" + arr[i] + "|");
+        }
+        System.out.println("");
 
         //search
-
-        int searchEle = 4;
-        int i=0;
+        int searchEle = 44;
+        i=0;
         for (;i<arr.length;i++){
             if(searchEle == arr[i]){
                 System.out.println("find at : "+(i+1));
@@ -22,7 +29,22 @@ public class ArrayApp {
             System.out.println("Cant able to find.. !!");
         }
 
-        System.out.println(arr.length);
+        //delete
+        int delEle=4;
+        for(i=0;i<arr.length;i++){
+            if(delEle == arr[i]){
+                break;
+            }
+        }
+
+        for(int k=i;k<arr.length-1;k++){
+            arr[k]=arr[k+1];
+        }
+
+        System.out.println("After Delete Elements are : ");
+        for(i=0;i<arr.length;i++){
+            System.out.print("|" + arr[i] + "|");
+        }
 
     }
 }
