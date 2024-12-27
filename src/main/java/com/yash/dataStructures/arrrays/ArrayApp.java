@@ -9,6 +9,7 @@ public class ArrayApp {
         int[] arr = new int[] {3,2,4,1,5,6,8,9,7,0};
 
         int i;
+
         //display
 
         System.out.println("Elements are : ");
